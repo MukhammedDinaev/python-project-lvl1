@@ -2,5 +2,5 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 [![Build Status](https://travis-ci.org/MukhammedDinaev/python-project-lvl1.svg?branch=master)](https://travis-ci.org/MukhammedDinaev/python-project-lvl1)
 https://travis-ci.org/MukhammedDinaev/python-project-lvl1.svg?branch=mastir
-[![asciicast](https://asciinema.org/a/1UiQ5K77Mz1hEXM54zpseqAhp.svg)](https://asciinema.org/a/1UiQ5K77Mz1hEXM54zpseqAhp)
+[![asciicast](https://asciinema.org/a/316536.svg)](https://asciinema.org/a/316536)
 
