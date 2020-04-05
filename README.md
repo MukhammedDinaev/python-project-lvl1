@@ -3,4 +3,5 @@
 [![Build Status](https://travis-ci.org/MukhammedDinaev/python-project-lvl1.svg?branch=master)](https://travis-ci.org/MukhammedDinaev/python-project-lvl1)
 https://travis-ci.org/MukhammedDinaev/python-project-lvl1.svg?branch=mastir
 [![asciicast](https://asciinema.org/a/316536.svg)](https://asciinema.org/a/316536)
+[![asciicast](https://asciinema.org/a/316992.svg)](https://asciinema.org/a/316992)
 
