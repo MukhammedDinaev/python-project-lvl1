@@ -5,4 +5,5 @@ https://travis-ci.org/MukhammedDinaev/python-project-lvl1.svg?branch=mastir
 [![asciicast](https://asciinema.org/a/316536.svg)](https://asciinema.org/a/316536)
 [![asciicast](https://asciinema.org/a/316992.svg)](https://asciinema.org/a/316992)
 [![asciicast](https://asciinema.org/a/317309.svg)](https://asciinema.org/a/317309)
+[![asciicast](https://asciinema.org/a/317324.svg)](https://asciinema.org/a/317324)
 
