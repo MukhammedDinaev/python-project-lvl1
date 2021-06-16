@@ -1,0 +1,6 @@
+.pytest_cache/
+.venv
+.pytest_cach
+/dist
+/__pycash__
+.swp
