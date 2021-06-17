@@ -26,4 +26,5 @@ jobs:
         # make depends on poetry
       - name: run linter
         run: |
+          pip install poetry
           make lint
