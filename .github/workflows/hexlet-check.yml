@@ -30,8 +30,4 @@ jobs:
           make install
       - name: add poetry and install
         run: |
-          pip install poetry
-          make install
-      - name: add poetry and install
-        run: |
           make lint
