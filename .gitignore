@@ -1,0 +1,4 @@
+.nenv
+/dist
+brain_games/scripts/__pycache__
+brain_games/__pycache__
