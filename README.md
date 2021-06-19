@@ -3,3 +3,6 @@
 
 
 [![asciicast](https://asciinema.org/a/BB5E5u91ae6OXQ8OCE3jkA8gJ.svg)](https://asciinema.org/a/BB5E5u91ae6OXQ8OCE3jkA8gJ)
+
+
+<a href="https://asciinema.org/a/BB5E5u91ae6OXQ8OCE3jkA8gJ" target="_blank"><img src="https://asciinema.org/a/BB5E5u91ae6OXQ8OCE3jkA8gJ.svg" /></a>
