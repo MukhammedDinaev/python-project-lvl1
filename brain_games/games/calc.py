@@ -6,6 +6,15 @@ name = cli.welcome_user()
 print("What is the result of the expression?")
 
 
+def true_ansdef(operator, num1, num2):
+    if operator == '+':
+        return str(num1 + num2)
+    if operator == '-':
+        return str(num1 - num2)
+    if operator == '*':
+        return str(num1 * num2)
+
+
 def calc(username=name, rec_count=0):
     if rec_count == 3:
         print('Congratulations, {}!'.format(username))
@@ -15,21 +24,16 @@ def calc(username=name, rec_count=0):
     operator = choice(['+', '-', '*'])
     print('Question:{} {} {}'.format(num1, operator, num2))
     answer = prompt.string("Your answer: ")
+    true_ans = true_ansdef(operator, num1, num2)
 
-    if operator == '+':
-        true_ans = num1 + num2
-    elif operator == '-':
-        true_ans = num1 - num2
-    else:
+    if operator == '+' and true_ans == answer:
+        print('Correct!')
+        return calc(name, rec_count + 1)
+    elif operator == '-' and true_ans == answer:
+        print('Correct!')
+        return calc(name, rec_count + 1)
+    elif operator == '*' and true_ans == answer:
         true_ans = num1 * num2
-
-    if operator == '+' and str(true_ans) == answer:
-        print('Correct!')
-        return calc(name, rec_count + 1)
-    elif operator == '-' and str(true_ans) == answer:
-        print('Correct!')
-        return calc(name, rec_count + 1)
-    elif operator == '*' and str(true_ans) == answer:
         print('Correct!')
         return calc(name, rec_count + 1)
     else:

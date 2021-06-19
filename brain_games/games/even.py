@@ -28,4 +28,3 @@ def even(username=name, rec_count=0):
         print('\'{}\' is wrong answer ;(.'.format(answer), end='')
         print(' Correct answer was \'{}\'.'.format('no'))
         return
-even()
