@@ -7,3 +7,12 @@ brain_games/.idea/
 .idea/
 .Makefile.swo
 .gitignore.swp
+*.egg-info
+__pycache__
+dist/
+*.pyc
+.venv/
+.coverage
+coverage.xml
+.pytest_cache/
+.vim
