@@ -6,6 +6,7 @@ brain_games/__pycache__
 brain_games/.idea/
 .idea/
 .Makefile.swo
+brain_games/games/__pycache__
 .gitignore.swp
 *.egg-info
 __pycache__
