@@ -1,43 +1,33 @@
-import prompt
 from random import randint, choice
-from brain_games import cli
-
-name = cli.welcome_user()
-print("What is the result of the expression?")
+import operator
 
 
-def true_ans_def(operator, num1, num2):
-    if operator == '+':
-        return str(num1 + num2)
-    elif operator == '-':
-        return str(num1 - num2)
-    else:
-        return str(num1 * num2)
+def ask_task():
+    print("What is the result of the expression?")
+    return
 
 
-def calc(username=name, rec_count=0):
-    if rec_count == 3:
-        print('Congratulations, {}!'.format(username))
-        return
-    num1 = randint(0, 10)
-    num2 = randint(0, 10)
+def ask_question():
+    number1 = randint(0, 10)
+    number2 = randint(0, 10)
     operator = choice(['+', '-', '*'])
-    print('Question:{} {} {}'.format(num1, operator, num2))
-    answer = prompt.string("Your answer: ")
-    true_ans = true_ans_def(operator, num1, num2)
+    about_question = (number1, operator, number2)
+    return '{} {} {}'.format(number1, operator, number2), about_question
 
-    if operator == '+' and true_ans == answer:
-        print('Correct!')
-        return calc(name, rec_count + 1)
-    elif operator == '-' and true_ans == answer:
-        print('Correct!')
-        return calc(name, rec_count + 1)
-    elif operator == '*' and true_ans == answer:
-        true_ans = num1 * num2
-        print('Correct!')
-        return calc(name, rec_count + 1)
+
+def start_calc(numbers_operator, user_answer):
+    number1, operator, number2 = numbers_operator
+
+    if operator == '+':
+        true_answer = str(number1 + numer2)
+    elif operator == '-':
+        true_answer = str(number1 - number2)
+    elif operator == '*':
+        true_answer = str(number1 * number2)
     else:
-        print('\'{}\' is wrong answer ;(.'.format(answer), end='')
-        print(' Correct answer was \'{}\'.'.format(str(true_ans)))
-        print('Let\'s try again, {}!'.format(username))
-        return
+        true_answer = 'didn\'t find true answer'
+
+    if true_answer == user_answer:
+        return true_answer, True
+    else:
+        return true_answer, False

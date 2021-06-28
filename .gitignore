@@ -1,16 +1,12 @@
-.nenv
+env
 /dist
-brain_games/scripts/__pycache__
-brain_games/__pycache__
 .Makefile.swo
 brain_games/.idea/
 .idea/
 .Makefile.swo
-brain_games/games/__pycache__
 .gitignore.swp
 *.egg-info
 __pycache__
-dist/
 *.pyc
 .venv/
 .coverage
