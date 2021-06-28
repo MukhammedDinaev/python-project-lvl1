@@ -1,5 +1,4 @@
 from random import randint, choice
-import operator
 
 
 def ask_task():
@@ -19,7 +18,7 @@ def start_calc(numbers_operator, user_answer):
     number1, operator, number2 = numbers_operator
 
     if operator == '+':
-        true_answer = str(number1 + numer2)
+        true_answer = str(number1 + number2)
     elif operator == '-':
         true_answer = str(number1 - number2)
     elif operator == '*':

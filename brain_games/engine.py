@@ -1,4 +1,3 @@
-import brain_games.games as game
 import prompt
 
 
@@ -26,7 +25,8 @@ def start_engine(game_funk, ask_task, ask_question, user_name='', rec_count=0):
 
     if check_game_step:
         print('Correct!')
-        return start_engine(game_funk, ask_task, ask_question, user_name, rec_count + 1)
+        return start_engine(game_funk, ask_task,
+                            ask_question, user_name, rec_count + 1)
 
     else:
         print('\'{}\' is wrong answer ;(.'.format(user_answer), end='')
