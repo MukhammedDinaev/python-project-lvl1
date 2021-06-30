@@ -31,4 +31,5 @@ def start_engine(game_funk, ask_task, ask_question, user_name='', rec_count=0):
     else:
         print('\'{}\' is wrong answer ;(.'.format(user_answer), end='')
         print(' Correct answer was \'{}\'.'.format(true_answer))
+        print('Let\'s try again, {}!'.format(user_name)
         return
