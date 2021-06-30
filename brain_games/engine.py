@@ -18,7 +18,7 @@ def start_engine(game_funk, ask_task, ask_question, user_name='', rec_count=0):
         return
 
     question = ask_question()
-    print('Question:{}'.format(question[0]))
+    print('Question: {}'.format(question[0]))
     user_answer = prompt.string("Your answer: ")
 
     true_answer, check_game_step = game_funk(question[1], user_answer)
