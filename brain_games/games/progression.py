@@ -9,7 +9,7 @@ def ask_task():
 def ask_question():
     first_num = randint(1, 10)
     step_num = randint(1, 10)
-    secret_index_num = randint(1, 10)
+    secret_index_num = randint(1, 9)
 
     progression_list = []
     true_answer = 0
