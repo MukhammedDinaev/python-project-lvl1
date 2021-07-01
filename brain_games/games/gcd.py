@@ -10,7 +10,7 @@ def ask_question():
     number1 = randint(0, 100)
     number2 = randint(0, 100)
     about_question = (number1, number2)
-    return '{}, {}'.format(number1, number2), about_question
+    return '{} {}'.format(number1, number2), about_question
 
 
 def start_gcd(numbers, user_answer):
