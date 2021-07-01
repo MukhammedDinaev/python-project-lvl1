@@ -7,12 +7,12 @@ def ask_task():
 
 
 def ask_question():
-    first_num = randint(0, 10)
+    first_num = randint(1, 10)
     step_num = randint(1, 10)
     secret_index_num = randint(1, 10)
 
     progression_list = []
-    true_answer = int()
+    true_answer = 0
     for i in range(10):
         if i == secret_index_num:
             progression_list.insert(i, '..')
