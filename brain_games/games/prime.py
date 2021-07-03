@@ -14,13 +14,6 @@ def ask_question():
 def start_prime(number, user_answer):
     true_answer = 'yes'
 
-    if number == 0:
-        true_answer = 'no'
-        if true_answer == user_answer:
-            return true_answer, True
-        else:
-            return true_answer, False
-
     is_prime = 2
 
     while is_prime <= abs(number) ** 0.5:

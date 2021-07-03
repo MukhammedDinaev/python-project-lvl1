@@ -26,13 +26,6 @@ def start_gcd(numbers, user_answer):
             break
         true_answer -= 1
 
-    if number1 == 0 or number2 == 0:
-        true_answer = 0
-        if str(true_answer) == user_answer:
-            return true_answer, True
-        else:
-            return true_answer, False
-
     if str(true_answer) == user_answer:
         return true_answer, True
     else:
