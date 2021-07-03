@@ -23,7 +23,7 @@ def ask_question():
             first_num += step_num
             progression_list.append(first_num)
     progression_list = ''.join(str(progression_list)).strip('[]')
-    progression_list = progression_list.eplace(',', '')
+    progression_list = progression_list.replace(',', '')
     progression_list = progression_list.replace("'", '')
     return progression_list, str(true_answer)
 
