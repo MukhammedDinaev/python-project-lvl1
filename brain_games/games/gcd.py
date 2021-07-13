@@ -1,9 +1,10 @@
 from random import randint
 
+game_steps = 3
+
 
 def ask_task():
-    print("Find the greatest common divisor of given numbers.")
-    return
+    return "Find the greatest common divisor of given numbers."
 
 
 def ask_question():
@@ -13,8 +14,8 @@ def ask_question():
     return '{} {}'.format(number1, number2), about_question
 
 
-def start_gcd(numbers, user_answer):
-    number1, number2 = numbers
+def find_gcd(about_question):
+    number1, number2 = about_question
 
     if number1 < number2:
         true_answer = number1
@@ -26,7 +27,11 @@ def start_gcd(numbers, user_answer):
             break
         true_answer -= 1
 
-    if str(true_answer) == user_answer:
-        return true_answer, True
-    else:
-        return true_answer, False
+    return str(true_answer)
+
+
+def start_game():
+    question, about_question = ask_question()
+    true_answer = find_gcd(about_question)
+
+    return question, true_answer

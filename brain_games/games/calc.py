@@ -1,9 +1,10 @@
 from random import randint, choice
 
+game_steps = 3
+
 
 def ask_task():
-    print("What is the result of the expression?")
-    return
+    return "What is the result of the expression?"
 
 
 def ask_question():
@@ -14,19 +15,21 @@ def ask_question():
     return '{} {} {}'.format(number1, operator, number2), about_question
 
 
-def start_calc(numbers_operator, user_answer):
-    number1, operator, number2 = numbers_operator
+def make_calc(about_question):
 
+    number1, operator, number2 = about_question
     if operator == '+':
-        true_answer = str(number1 + number2)
+        return str(number1 + number2)
     elif operator == '-':
-        true_answer = str(number1 - number2)
+        return str(number1 - number2)
     elif operator == '*':
-        true_answer = str(number1 * number2)
+        return str(number1 * number2)
     else:
-        true_answer = 'didn\'t find true answer'
+        return 'didn\'t find true answer'
 
-    if true_answer == user_answer:
-        return true_answer, True
-    else:
-        return true_answer, False
+
+def start_game():
+    question, about_question = ask_question()
+    true_answer = make_calc(about_question)
+
+    return question, true_answer

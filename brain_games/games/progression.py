@@ -1,9 +1,10 @@
 from random import randint
 
+game_steps = 3
+
 
 def ask_task():
-    print("What number is missing in the progression?.")
-    return
+    return "What number is missing in the progression?."
 
 
 def ask_question():
@@ -28,8 +29,6 @@ def ask_question():
     return progression_list, str(true_answer)
 
 
-def start_progression(true_answer, user_answer):
-    if true_answer == user_answer:
-        return true_answer, True
-    else:
-        return true_answer, False
+def start_game():
+    question, true_answer = ask_question()
+    return question, true_answer

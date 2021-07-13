@@ -8,28 +8,25 @@ def say_hi_question():
     return name
 
 
-def start_engine(game_funk, ask_task, ask_question, user_name='', rec_count=0):
-    if rec_count == 0:
-        user_name = say_hi_question()
-        ask_task()
+def start_engine(game_funk):
+    user_name = say_hi_question()
+    task = game_funk.ask_task()
+    print(task)
+    steps = game_funk.game_steps
 
-    if rec_count == 3:
-        print('Congratulations, {}!'.format(user_name))
-        return
+    round = 0
+    while steps != round:
+        question, true_answer = game_funk.start_game()
+        print('Question: {}'.format(question))
+        user_answer = prompt.string("Your answer: ")
 
-    question = ask_question()
-    print('Question: {}'.format(question[0]))
-    user_answer = prompt.string("Your answer: ")
-
-    true_answer, check_game_step = game_funk(question[1], user_answer)
-
-    if check_game_step:
-        print('Correct!')
-        return start_engine(game_funk, ask_task,
-                            ask_question, user_name, rec_count + 1)
-
-    else:
-        print('\'{}\' is wrong answer ;(.'.format(user_answer), end='')
-        print(' Correct answer was \'{}\'.'.format(true_answer))
-        print('Let\'s try again, {}!'.format(user_name))
-        return
+        if true_answer == user_answer:
+            print('Correct!')
+            round += 1
+            continue
+        else:
+            print('\'{}\' is wrong answer ;(.'.format(user_answer), end='')
+            print(' Correct answer was \'{}\'.'.format(true_answer))
+            print('Let\'s try again, {}!'.format(user_name))
+            return
+    print('Congratulations, {}!'.format(user_name))

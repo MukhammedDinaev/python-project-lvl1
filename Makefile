@@ -27,3 +27,4 @@ do:
 	make build
 	make publish
 	make package-install
+	poetry update
