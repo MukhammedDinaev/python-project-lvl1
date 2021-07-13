@@ -24,4 +24,4 @@ jobs:
     - name: Build package
       run: make do
     - name: run linter
-      run: make lint
+      run: poetry run flake8 brain_games
