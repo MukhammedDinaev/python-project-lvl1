@@ -1,4 +1,4 @@
-name: Package test
+name: Flake8 tests
 
 on:
   push:
