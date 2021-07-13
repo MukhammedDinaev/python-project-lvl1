@@ -21,5 +21,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install build
         pip install poetry
+        poetry install
     - name: run linter
       run: poetry run flake8 brain_games
