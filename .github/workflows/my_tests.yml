@@ -24,4 +24,4 @@ jobs:
           pip install poetry
       - name: run linter
         run: |
-          make do
+          poetry run flake8 brain_games
