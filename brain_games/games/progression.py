@@ -1,34 +1,26 @@
 from random import randint
 
-game_steps = 3
+task = "What number is missing in the progression?."
 
 
-def ask_task():
-    return "What number is missing in the progression?."
+def get_round_data():
+    lenth = 10
 
+    first_num = randint(0, lenth)
+    step_num = randint(1, lenth)
+    secret_index_num = randint(0, lenth)
 
-def ask_question():
-    first_num = randint(1, 10)
-    step_num = randint(1, 10)
-    secret_index_num = randint(1, 9)
-
-    progression_list = []
+    progression = []
     true_answer = 0
-    for i in range(10):
-        if i == secret_index_num:
-            progression_list.insert(i, '..')
-            true_answer = first_num + step_num
-            first_num += step_num
-            continue
+
+    for index in range(0, lenth):
+        if index == secret_index_num:
+            progression.insert(index, '.. ')
+            true_answer = first_num + step_num * index
         else:
-            first_num += step_num
-            progression_list.append(first_num)
-    progression_list = ''.join(str(progression_list)).strip('[]')
-    progression_list = progression_list.replace(',', '')
-    progression_list = progression_list.replace("'", '')
-    return progression_list, str(true_answer)
+            progression.append(str(first_num + step_num * index) + ' ')
 
+    question = ''.join(progression).strip('[]')
+    true_answer = str(true_answer)
 
-def start_game():
-    question, true_answer = ask_question()
     return question, true_answer
